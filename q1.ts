@@ -10,9 +10,9 @@ interface Shop {
 }
 
 function buyItem(hero: Hero, shop: Shop): Hero {
-  if (hero.gold >= shop.price) {
-    hero.items.push(shop.item);
-    hero.gold -= shop.price;
+  if(hero.gold >= shop.price){
+    hero.gold = hero.gold-shop.price
+    hero.items.push(shop.item)
   }
   return hero
 }
