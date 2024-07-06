@@ -1,4 +1,4 @@
-// define interface for Hero and Shop objects
+
 interface Hero {
   items:string[];
   gold:number;
@@ -9,7 +9,6 @@ interface Shop {
   price:number;
 }
 
-// assign interface/type to the function definition properly
 function buyItem(hero: Hero, shop: Shop): Hero {
   if (hero.gold >= shop.price) {
     hero.items.push(shop.item);
@@ -18,7 +17,7 @@ function buyItem(hero: Hero, shop: Shop): Hero {
   return hero
 }
 
-//Test cases : assign proper type/interface to all objects
+
 const hero1 : Hero = {
   items: ["sword", "potion"],
   gold: 50,
